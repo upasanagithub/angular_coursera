@@ -1,3 +1,5 @@
 (function(){
-  angular.module('myApp',[]);
+  angular.module('myApp',[]).controller('myFC',function(){
+
+  });
 })();
