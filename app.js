@@ -1,8 +1,9 @@
 (function(){
   'use restrict';
-  angular.module('myApp',[]).controller('myFC',function($scope){
+  angular.module('myApp',[]).controller('myFC', callmyFC);
+  function callmyFC($scope){
 
-    $scope.name="Upasana";
+    $scope.name="Upasana Mahanta";
 
   });
 })();
