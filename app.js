@@ -10,7 +10,7 @@
       $scope.name = upcase($scope.name);
     };
     var msg = $scope.name;
-    myfilterFilter(msg);
+    $scope.name = myfilterFilter(msg);
   };
 })();
 
