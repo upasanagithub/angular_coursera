@@ -13,7 +13,7 @@
       console.log($scope);
     };
   };
-  $scope.$watch('name',function(oldValue, newValue)){
+  $scope.$watch('name',function(newValue, oldValue)){
     console.log(oldValue+" -> "+newValue);
   };
 })();
