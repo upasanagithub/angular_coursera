@@ -9,7 +9,9 @@
       var upcase = $filter('uppercase');
       $scope.name = myfilterFilter(upcase($scope.name));
     };
-
+    $scope.showNum = function(){
+      cosnole.log($scope);
+    };
   };
 })();
 
