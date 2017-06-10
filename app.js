@@ -7,10 +7,9 @@
   function callmyFC($scope, $filter, myfilterFilter){
     $scope.upp=function(){
       var upcase = $filter('uppercase');
-      $scope.name = upcase($scope.name);
+      $scope.name = myfilterFilter(upcase($scope.name));
     };
-    var msg = $scope.name;
-    $scope.name = myfilterFilter(msg);
+
   };
 })();
 
