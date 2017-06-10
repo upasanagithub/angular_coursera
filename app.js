@@ -13,9 +13,9 @@
       console.log($scope);
     };
   };
-  $scope.$watch('name',function(newValue, oldValue)){
+  $scope.$watch('name',function(newValue, oldValue){
     console.log(oldValue+" -> "+newValue);
-  };
+  });
 })();
 
 function myFilterFac(){
