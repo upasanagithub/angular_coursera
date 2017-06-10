@@ -21,7 +21,7 @@
 function myFilterFac(){
   return function(ip){
     if(ip==undefined){
-      ip=='';
+      ip='';
     }
     return ip+"***filter";
   };
