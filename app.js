@@ -10,7 +10,7 @@
       $scope.name = myfilterFilter(upcase($scope.name));
     };
     $scope.showNum = function(){
-      cosnole.log($scope);
+      console.log($scope);
     };
   };
 })();
