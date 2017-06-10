@@ -13,10 +13,16 @@
       console.log($scope);
     };
   };
+  $scope.$watch('name',function(oldValue, newValue)){
+    console.log(oldValue+" -> "+newValue);
+  };
 })();
 
 function myFilterFac(){
   return function(ip){
-      return ip+"***filter";
+    if(ip==undefined){
+      ip=='';
+    }
+    return ip+"***filter";
   };
 }
