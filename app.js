@@ -1,10 +1,11 @@
 (function(){
   'use restrict';
-  angular.module('myApp',[]).controller('myFC', callmyFC).filter("myfilter",myFilterFac);
+  angular.module('myApp',[]).controller('myFC', callmyFC).filter("myfilter",myFilterFac).service('myService', callmyService);
 
-  callmyFC.$inject = ['$scope','$filter','myfilterFilter'];
+  callmyFC.$inject = ['$scope','$filter','myfilterFilter', 'callmyService'];
 
-  function callmyFC($scope, $filter, myfilterFilter){
+
+  function callmyFC($scope, $filter, myfilterFilter, callmyService){
     $scope.upp=function(){
       var upcase = $filter('uppercase');
       $scope.name = myfilterFilter(upcase($scope.name));
@@ -16,7 +17,14 @@
   $scope.$watch('name',function(newValue, oldValue){
     console.log(oldValue+" -> "+newValue);
   });
+  callmyService();
 })();
+
+function callmyService(){
+  var svc = this;
+  svc.msg = "Service function called!!!";
+  
+}
 
 function myFilterFac(){
   return function(ip){
